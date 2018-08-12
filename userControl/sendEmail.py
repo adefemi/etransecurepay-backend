@@ -19,7 +19,7 @@ def EmailTemplate(sender, bank, accnum, amount, country, refnum):
         '      </ul>\n' +
         '      <ul style="list-style: none; margin: 10px 0; padding: 0">\n' +
         '          <li style="width: 200px;  float: left">Amount Transferred:</li>\n' +
-        '          <li style="font-weight: bold">'+amount+'</li>\n' +
+        '          <li style="font-weight: bold">$'+amount+'</li>\n' +
         '      </ul>\n' +
         '      <ul style="list-style: none; margin: 10px 0; padding: 0">\n' +
         '          <li style="width: 200px;  float: left">Country:</li>\n' +

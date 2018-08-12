@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="29cc235f-e35b-48d7-9d64-2689468751d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/userControl/models.py" afterPath="$PROJECT_DIR$/userControl/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/userControl/sendEmail.py" afterPath="$PROJECT_DIR$/userControl/sendEmail.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/userControl/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="35" column="30" lean-forward="false" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+            <state relative-caret-position="384">
+              <caret line="41" column="50" lean-forward="true" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -107,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sendEmail.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="sendEmail.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/userControl/sendEmail.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="42" column="35" lean-forward="false" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
+            <state relative-caret-position="336">
+              <caret line="21" column="50" lean-forward="false" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -159,8 +160,8 @@
         <option value="$PROJECT_DIR$/userControl/serializers.py" />
         <option value="$PROJECT_DIR$/etranspay/settings.py" />
         <option value="$PROJECT_DIR$/userControl/views.py" />
-        <option value="$PROJECT_DIR$/userControl/sendEmail.py" />
         <option value="$PROJECT_DIR$/userControl/models.py" />
+        <option value="$PROJECT_DIR$/userControl/sendEmail.py" />
       </list>
     </option>
   </component>
@@ -175,7 +176,7 @@
       <scroll-view-position x="0" y="0" />
     </layout>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -278,7 +279,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18228404" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -752,14 +753,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/userControl/sendEmail.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="42" column="35" lean-forward="false" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/userControl/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
@@ -775,11 +768,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/userControl/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="35" column="30" lean-forward="false" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+        <state relative-caret-position="384">
+          <caret line="41" column="50" lean-forward="true" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userControl/sendEmail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" column="50" lean-forward="false" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
