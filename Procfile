@@ -1,0 +1,1 @@
+web: gunicorn etranspay.wsgi --log-file -
