@@ -33,7 +33,7 @@ class SwiftCode(models.Model):
 
 class TransactionLog(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    amount = models.FloatField(default=0.0)
+    amount = models.CharField(default="0.0", max_length=200)
     bankname = models.CharField(max_length=200)
     benEmail = models.EmailField()
     benAccNum = models.CharField(max_length=256)
