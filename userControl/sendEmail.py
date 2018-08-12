@@ -40,6 +40,6 @@ def EmailTemplate(sender, bank, accnum, amount, country, refnum):
 def SendMail(sender, bank, accnum, amount, country, refnum, receiver):
     subject = 'ETRANSECUREPAY - TRANSACTIONS'
     html_content = EmailTemplate(sender, bank, accnum, amount, country, refnum)
-    plain_message = "ETRANSECUREPAY"
+    plain_message = "Etransecurepay"
 
     send_mail(subject, sender, plain_message, [receiver],fail_silently=False, html_message=html_content)

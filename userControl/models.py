@@ -38,7 +38,7 @@ class TransactionLog(models.Model):
     benEmail = models.EmailField()
     benAccNum = models.CharField(max_length=256)
     code = models.CharField(max_length=20)
-    country = models.CharField(max_length=500)
+    country = models.CharField(max_length=200)
     referenceNum = models.CharField(max_length=20)
     htmlTemplate = models.TextField(default="")
     created_at = models.IntegerField(default=int(datetime.now().timestamp()))
