@@ -6,23 +6,23 @@ def EmailTemplate(sender, bank, accnum, amount, country, refnum):
         '      <h2>Transaction Notification - <span style="color: #1cb8b9">Successful!</span></h2>\n' +
         '      <p>The following transaction you performed was successful;</p><br/>\n' +
         '      <ul style="list-style: none; margin: 10px 0; padding: 0">\n' +
-        '          <li style="width: 200px;  float: left">Sender Name:</li>\n' +
+        '          <li style="width: 150px;  float: left">Sender Name:</li>\n' +
         '          <li style="font-weight: bold;">'+sender+'</li>\n' +
         '      </ul>\n' +
         '      <ul style="list-style: none; margin: 10px 0; padding: 0">\n' +
-        '          <li style="width: 200px;  float: left">Bank Name:</li>\n' +
+        '          <li style="width: 150px;  float: left">Bank Name:</li>\n' +
         '          <li style="font-weight: bold; text-transform: capitalize;">'+bank+'</li>\n' +
         '      </ul>\n' +
         '      <ul style="list-style: none; margin: 10px 0; padding: 0">\n' +
-        '          <li style="width: 200px;  float: left">Account Number:</li>\n' +
+        '          <li style="width: 150px;  float: left">Account Number:</li>\n' +
         '          <li style="font-weight: bold">'+accnum+'</li>\n' +
         '      </ul>\n' +
         '      <ul style="list-style: none; margin: 10px 0; padding: 0">\n' +
-        '          <li style="width: 200px;  float: left">Amount Transferred:</li>\n' +
+        '          <li style="width: 150px;  float: left">Amount Transferred:</li>\n' +
         '          <li style="font-weight: bold">'+amount+'</li>\n' +
         '      </ul>\n' +
         '      <ul style="list-style: none; margin: 10px 0; padding: 0">\n' +
-        '          <li style="width: 200px;  float: left">Country:</li>\n' +
+        '          <li style="width: 150px;  float: left">Country:</li>\n' +
         '          <li style="font-weight: bold">'+country+'</li>\n' +
         '      </ul><br />\n' +
         '        <p>Your reference number is: <strong>'+refnum+'</strong></p>\n' +
