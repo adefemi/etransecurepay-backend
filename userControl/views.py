@@ -77,7 +77,7 @@ class TransactionLogViewSet(viewsets.ModelViewSet):
             except Exception as e:
                 return response.Response(e, status=status.HTTP_400_BAD_REQUEST)
 
-            SendMail(Log.user.email, Log.bankname, Log.benAccNum, str(Log.amount), Log.country, Log.referenceNum, Log.benEmail)
+            SendMail(Log.user.email, Log.bankname, Log.benAccNum, Log.amount, Log.country, Log.referenceNum, Log.benEmail)
 
             return response.Response("message send", status=status.HTTP_200_OK)
 
