@@ -1,5 +1,4 @@
 from django.core.mail import send_mail
-from django.conf.global_settings import EMAIL_HOST_USER
 
 def EmailTemplate(sender, bank, accnum, amount, country, refnum):
     return(
@@ -48,13 +47,16 @@ def EnquiryTemplate(fullname, email, telephone, message):
         '      </ul>\n' +
         '      <ul style="list-style: none; margin: 10px 0; padding: 0">\n' +
         '          <li style="width: 150px;  float: left">Email Address:</li>\n' +
-        '          <li style="font-weight: bold; text-transform: capitalize;">'+email+'</li>\n' +
+        '          <li style="font-weight: bold">'+email+'</li>\n' +
         '      </ul>\n' +
         '      <ul style="list-style: none; margin: 10px 0; padding: 0">\n' +
         '          <li style="width: 150px;  float: left">Telephone:</li>\n' +
         '          <li style="font-weight: bold">'+telephone+'</li>\n' +
         '      </ul>\n' +
-        '        <p>'+message+'</p>\n' +
+        '      <ul style="list-style: none; margin: 10px 0; padding: 0">\n' +
+        '          <li style="width: 150px;  float: left">Message:</li>\n' +
+        '          <li style="font-weight: bold">' + message + '</li>\n' +
+        '      </ul>\n' +
         '    </div>\n'
     )
 
