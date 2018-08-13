@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from .models import UserProfile, UserAccounts, SwiftCode, TransactionLog
+from .models import UserProfile, UserAccounts, SwiftCode, TransactionLog, Enquiry
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -76,4 +76,11 @@ class TransactionLogSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = TransactionLog
+        fields = "__all__"
+
+class EnquirySerializer(serializers.ModelSerializer):
+    created_at = serializers.IntegerField(read_only=True)
+
+    class Meta:
+        model = Enquiry
         fields = "__all__"

@@ -45,3 +45,13 @@ class TransactionLog(models.Model):
 
     def __str__(self):
         return self.user.username+" - "+self.referenceNum
+
+class Enquiry(models.Model):
+    fullname = models.CharField(max_length=200)
+    email =models.EmailField()
+    telephone = models.CharField(max_length=100)
+    message = models.TextField()
+    created_at = models.IntegerField(default=int(datetime.now().timestamp()))
+
+    def __str__(self):
+        return self.fullname+" - "+str(self.created_at)

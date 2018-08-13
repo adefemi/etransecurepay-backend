@@ -1,4 +1,5 @@
 from django.core.mail import send_mail
+from django.conf.global_settings import EMAIL_HOST_USER
 
 def EmailTemplate(sender, bank, accnum, amount, country, refnum):
     return(
@@ -37,9 +38,36 @@ def EmailTemplate(sender, bank, accnum, amount, country, refnum):
         '    </div>\n'
     )
 
+def EnquiryTemplate(fullname, email, telephone, message):
+    return(
+        '    <div style="border: 2px solid black; padding: 20px">\n' +
+        '      <p>The following enquiry was issued to etransecurepay</p><br/>\n' +
+        '      <ul style="list-style: none; margin: 10px 0; padding: 0">\n' +
+        '          <li style="width: 150px;  float: left">Full Name:</li>\n' +
+        '          <li style="font-weight: bold;">'+fullname+'</li>\n' +
+        '      </ul>\n' +
+        '      <ul style="list-style: none; margin: 10px 0; padding: 0">\n' +
+        '          <li style="width: 150px;  float: left">Email Address:</li>\n' +
+        '          <li style="font-weight: bold; text-transform: capitalize;">'+email+'</li>\n' +
+        '      </ul>\n' +
+        '      <ul style="list-style: none; margin: 10px 0; padding: 0">\n' +
+        '          <li style="width: 150px;  float: left">Telephone:</li>\n' +
+        '          <li style="font-weight: bold">'+telephone+'</li>\n' +
+        '      </ul>\n' +
+        '        <p>'+message+'</p>\n' +
+        '    </div>\n'
+    )
+
 def SendMail(sender, bank, accnum, amount, country, refnum, receiver):
     subject = 'ETRANSECUREPAY - TRANSACTIONS'
     html_content = EmailTemplate(sender, bank, accnum, amount, country, refnum)
     plain_message = "ETRANSECUREPAY transaction services"
 
     send_mail(subject, sender, plain_message, [receiver],fail_silently=False, html_message=html_content)
+
+def SendEnquiry(fullname, email, telephone, message):
+    subject = 'ETRANSECUREPAY - ENQUIRY'
+    html_content = EnquiryTemplate(fullname, email, telephone, message)
+    plain_message = "ETRANSECUREPAY transaction services"
+
+    send_mail(subject, email, plain_message, [EMAIL_HOST_USER], fail_silently=False, html_message=html_content)

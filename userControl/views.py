@@ -1,8 +1,8 @@
 from rest_framework import viewsets, response, permissions, status, generics
-from .serializers import UserSerializer, UserProfileSerializer, UserAccountSerializer, ChangePasswordSerializer, UpdateAdminSerializer, SwiftCodeSerializer, TransactionLogSerializer
-from .models import UserProfile, UserAccounts, SwiftCode, TransactionLog
+from .serializers import UserSerializer, UserProfileSerializer, UserAccountSerializer, ChangePasswordSerializer, UpdateAdminSerializer,SwiftCodeSerializer, TransactionLogSerializer, EnquirySerializer
+from .models import UserProfile, UserAccounts, SwiftCode, TransactionLog, Enquiry
 from django.contrib.auth.models import User
-from .sendEmail import SendMail
+from .sendEmail import SendMail, SendEnquiry
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
@@ -72,14 +72,27 @@ class TransactionLogViewSet(viewsets.ModelViewSet):
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
         if serializer.is_valid():
-            try:
-                Log = serializer.save()
-            except Exception as e:
-                return response.Response(e, status=status.HTTP_400_BAD_REQUEST)
+            Log = serializer.save()
 
             SendMail(Log.user.email, Log.bankname, Log.benAccNum, Log.amount, Log.country, Log.referenceNum, Log.benEmail)
 
             return response.Response("message send", status=status.HTTP_200_OK)
+
+
+        return response.Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class EnquiryViewSet(viewsets.ModelViewSet):
+    queryset = Enquiry.objects.all()
+    serializer_class = EnquirySerializer
+
+    def create(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        if serializer.is_valid():
+            Enquiry = serializer.save()
+
+            SendEnquiry(Enquiry.fullname, Enquiry.email, Enquiry.telephone, Enquiry.message)
+
+            return response.Response("Enquiry send", status=status.HTTP_200_OK)
 
 
         return response.Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
