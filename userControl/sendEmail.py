@@ -70,4 +70,4 @@ def SendEnquiry(fullname, email, telephone, message):
     html_content = EnquiryTemplate(fullname, email, telephone, message)
     plain_message = "ETRANSECUREPAY transaction services"
 
-    send_mail(subject, email, plain_message, [EMAIL_HOST_USER], fail_silently=False, html_message=html_content)
+    send_mail(subject, email, plain_message, ["adefemigreat1995@gmail.com"], fail_silently=False, html_message=html_content)
