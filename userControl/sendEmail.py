@@ -7,7 +7,7 @@ def EmailTemplate(sender, benName,bank, accnum, amount, country, refnum):
         '      <p>The following transaction you performed was successful;</p><br/>\n' +
         '      <ul style="list-style: none; margin: 10px 0; padding: 0">\n' +
         '          <li style="width: 150px;  float: left">Sender Name:</li>\n' +
-        '          <li style="font-weight: bold;">'+sender+'</li>\n' +
+        '          <li style="font-weight: bold; text-transform: capitalize;">'+sender+'</li>\n' +
         '      </ul>\n' +
         '      <ul style="list-style: none; margin: 10px 0; padding: 0">\n' +
         '          <li style="width: 150px;  float: left">Bank Name:</li>\n' +
@@ -16,15 +16,15 @@ def EmailTemplate(sender, benName,bank, accnum, amount, country, refnum):
         '      <ul style="list-style: none; margin: 10px 0; padding: 0">\n' +
         '          <li style="width: 150px;  float: left">Country:</li>\n' +
         '          <li style="font-weight: bold">' + country + '</li>\n' +
-        '      </ul><br />\n' +
+        '      </ul>\n' +
         '      <ul style="list-style: none; margin: 10px 0; padding: 0">\n' +
         '          <li style="width: 150px;  float: left">Beneficiary Name:</li>\n' +
         '          <li style="font-weight: bold">' + benName + '</li>\n' +
-        '      </ul><br />\n' +
+        '      </ul>\n' +
         '      <ul style="list-style: none; margin: 10px 0; padding: 0">\n' +
         '          <li style="width: 150px;  float: left">Beneficiary Account Number:</li>\n' +
         '          <li style="font-weight: bold">' + accnum + '</li>\n' +
-        '      </ul>\n' +
+        '      </ul><br />\n' +
         '      <ul style="list-style: none; margin: 10px 0; padding: 0">\n' +
         '          <li style="width: 150px;  float: left">Amount Transferred:</li>\n' +
         '          <li style="font-weight: bold">'+amount+'</li>\n' +
