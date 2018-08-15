@@ -35,6 +35,8 @@ class TransactionLog(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     amount = models.CharField(max_length=200)
     bankname = models.CharField(max_length=200)
+    sender = models.CharField(max_length=200)
+    benName = models.CharField(max_length=200)
     benEmail = models.EmailField()
     benAccNum = models.CharField(max_length=256)
     code = models.CharField(max_length=20)

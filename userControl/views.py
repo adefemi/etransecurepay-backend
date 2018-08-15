@@ -74,7 +74,7 @@ class TransactionLogViewSet(viewsets.ModelViewSet):
         if serializer.is_valid():
             Log = serializer.save()
 
-            SendMail(Log.user.email, Log.bankname, Log.benAccNum, Log.amount, Log.country, Log.referenceNum, Log.benEmail)
+            SendMail(Log.sender, Log.benName, Log.bankname, Log.benAccNum, Log.amount, Log.country, Log.referenceNum, Log.benEmail)
 
             return response.Response("message send", status=status.HTTP_200_OK)
 
