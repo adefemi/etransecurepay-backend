@@ -10,7 +10,7 @@ def EmailTemplate(sender, benName,bank, accnum, amount, country, refnum):
         '          <li style="font-weight: bold; text-transform: capitalize;">'+sender+'</li>\n' +
         '      </ul>\n' +
         '      <ul style="list-style: none; margin: 10px 0; padding: 0">\n' +
-        '          <li style="width: 150px;  float: left">Bank Name:</li>\n' +
+        '          <li style="width: 150px;  float: left">Beneficiary Bank:</li>\n' +
         '          <li style="font-weight: bold; text-transform: capitalize;">'+bank+'</li>\n' +
         '      </ul>\n' +
         '      <ul style="list-style: none; margin: 10px 0; padding: 0">\n' +
