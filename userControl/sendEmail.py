@@ -3,6 +3,7 @@ from django.core.mail import send_mail
 def EmailTemplate(sender, benName,bank, accnum, amount, country, refnum):
     return(
         '    <div style="border: 2px solid black; padding: 20px">\n' +
+        '   <img src="https://image.ibb.co/k0ZOHe/etrans3.png" height="100" width="300" alt="">'+
         '      <h2>Transaction Notification - <span style="color: #1cb8b9">Successful!</span></h2>\n' +
         '      <p>The following transaction you performed was successful;</p><br/>\n' +
         '      <ul style="list-style: none; margin: 10px 0; padding: 0">\n' +
